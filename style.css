@@ -10,6 +10,22 @@ header {
     padding: 20px;
     text-align: center;
 }
+section {
+  padding: 60px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+section h2 {
+  margin-bottom: 15px;
+  color: #333;
+}
+
+section p, section li {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
 
 .gallery {
     display: grid;
@@ -54,4 +70,64 @@ button:hover {
 
 .art-card img:hover {
     transform: scale(1.08);
+
+}
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 25px;
+  background: #222;
+  color: white;
+}
+
+.logo {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nav-links li a:hover {
+  color: #ff9800;
+}
+
+/* HAMBURGER */
+.hamburger {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+/* MOBILE VIEW */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #333;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    padding: 15px;
+    border-radius: 10px;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
 }
